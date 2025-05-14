@@ -1,0 +1,426 @@
+:root {
+    --pink: #e84393; 
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s ease-in-out;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 1.75rem 9%;
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, .05);
+}
+.heading span{
+    color: #e84393 ;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    background: var(--pink);
+}
+
+/* ---- Header/Navbar Fix ---- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+/* ---- Logo Styling ---- */
+header .logo {
+    font-size: 3rem;
+    color: #333;
+    font-weight: bold;
+}
+
+header .logo span {
+    color: var(--pink);
+}
+
+/* ---- Navbar Fix ---- */
+header .navbar {
+    display: flex;
+    gap: 2rem; /* Adds space between menu items */
+}
+
+header .navbar a {
+    font-size: 2rem;
+    color: #666;
+    padding: 0.5rem 1.2rem;
+}
+
+header .navbar a:hover {
+    color: var(--pink);
+}
+
+/* ---- Icons Fix ---- */
+header .icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Adds space between icons */
+}
+
+header .icons a {
+    font-size: 3rem;
+    color: #333;
+}
+
+header .icons a:hover {
+    color: var(--pink);
+}
+
+/* ---- Mobile Menu ---- */
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+
+/* ---- Home Section ---- */
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(new.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content {
+    max-width: 60rem;
+}
+
+.home .content h3 {
+    font-size: 6rem;
+    color: #333;
+}
+
+.home .content span {
+    font-size: 3.5rem;
+    color: var(--pink);
+    display: block;
+    margin-top: 1rem;
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    color: #999;
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    padding-bottom: 3rem;
+}
+.about .row .video-container{
+    flex:1 1 40rem;
+    position: relative;
+
+}
+.about .row .video-container video{
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+    height: 100%;
+    object-fit: cover;
+}
+
+/*.about .row .video-container{
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    background:#fff;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+}*/
+.about .row .content{
+    flex: 1 1 40rem;
+}
+.about .row .content h3{
+    font-size: 3rem;
+    color:#333
+}
+
+.about .row .content p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: 5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+
+}
+.about .row h3{
+    color: #e84393;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.icons-conta{
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-conta .icons{
+    background: #fff;
+    border: 1rem solid rgba(0,0,0,0.1);
+    padding: 2rem;
+    align-items: center;
+    flex:1 1 25rem;
+}
+.icons-conta .icons img{
+    height: 5rem;
+    margin-right: 1.5rem;
+}
+.icons-conta .icons h3{
+    color: #333;
+    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+.icons-conta .icons span{
+    color: #555;
+    font-size: 1.3;
+}
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.products .box-container .box{
+    flex: 1 1 30rem;
+     box-shadow: 0 .5rem 1.5rem rgba(0,0,0,0.1);
+     border-radius: .5rem;
+     border: .1rem solid rgba(0,0,0,0.1);
+     position: relative;
+}
+.products .box-container .box .discount{
+      position: absolute;
+      top: 1rem; left: 1rem;
+      padding: .7rem 1rem;
+      font-size: 2rem;
+      color: var(--pink);
+      background: rgba(255, 51, 153, .05);
+      z-index: 1;
+      border-radius: .5rem;
+}
+.products .box-container .box .image{
+ position: relative;
+ text-align: center;
+ padding-top: 2rem;
+ overflow: hidden;
+}
+.products .box-container .box .image img{
+    height:25rem ;
+}
+.products .box-container .box:hover.image img{
+    transform: scale(1.1);
+}
+.products .box-container .box .image .icons{
+    position:absolute;
+    bottom: -7rem; left:0; right: 0;
+    display: flex;
+
+}
+.products .box-container .box:hover .image .icons{
+    bottom: 0;
+}
+.products .box-container .box .image .icons a{
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    width: 50%;
+    background: var(--pink);
+    color: #fff;
+}
+.products .box-container .box .image .icons .cart-btn{
+    border-left: .1rem solid #ff7;
+    border-right: .1rem solid #ff7;
+    width: 100%;
+}
+.products .box-container .box .image .icons a:hover{
+    background: #333;
+}
+.products .box-container .box .content{
+    padding: 2rem;
+    text-align: center;
+}
+.products .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: #333;
+}
+.products .box-container .box .content .price{
+    font-size: 2.3rem;
+    color: #333;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+.products .box-container .box .content .price span{
+    font-size: 1.5rem;
+    color: #999;
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+.contact .row{
+    font-size: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.contact .row form{
+    flex: 1 1 40rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.1);
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: .5rem;
+ }
+.contact .row .image{
+    flex: 1 1 40rem;
+ }
+ .contact .row .image img{
+    width: 100%;
+ }
+.contact .row form .box{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    margin: .7rem 0;
+    width: 100%;
+}
+.contact .row form .box:focus{
+    border-color: #e84393;
+}
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---- Responsive Fixes ---- */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding: 2rem 5%;
+    }
+    section {
+        padding: 2rem 5%;
+    }
+    .home {
+        background-position: left;
+    }
+}
+
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    header #toggler:checked ~ .navbar {
+        display: flex;
+    }
+
+    header .navbar a {
+        padding: 1.5rem;
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+}
